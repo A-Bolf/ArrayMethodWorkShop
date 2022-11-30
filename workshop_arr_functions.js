@@ -100,9 +100,26 @@ const arrSort = () => {
   // If compare(a, b) > 0, sort b to an index lower than a meaning b comes first.
 };
 
+//reverse indexing with at() method
+const arrAt = () => {
+  const food = ["🍔", "🍟", "🍕", "🌭"];
+  console.log(food.at(-1));
+  let index = 0;
+  let str = "";
+  for (let i = 0; i < 10; i++) {
+    index++;
+    if (index >= food.length) {
+      index *= -1;
+    }
+    str += food.at(index);
+  }
+  console.log(str);
+};
+
 shallowCopy();
 arrJoin();
 arrFilter();
 arrMap();
 arrReduce();
 arrSort();
+arrAt();
